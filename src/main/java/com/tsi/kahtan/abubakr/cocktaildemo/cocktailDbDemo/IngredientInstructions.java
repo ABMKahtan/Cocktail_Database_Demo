@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IngredientInstructions {
-
+/*
 
     private List<IngredientInstructions> ingredientInstructionsList = new ArrayList<>();
     private int instructionID;
@@ -27,5 +27,7 @@ public class IngredientInstructions {
         String json = new Gson().toJson(ingredientInstructionsList);
         return json;
     }
+
+ */
     
 }

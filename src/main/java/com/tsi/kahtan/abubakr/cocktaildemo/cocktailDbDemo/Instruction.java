@@ -14,5 +14,10 @@ public class Instruction {
         this.glassID = glassID;
     }
 
-
+    @Override
+    public String toString(){
+        return "{" +
+                "\"Instruction Information: \"= \"" + instructionDescription +
+                "\"}";
+    }
 }

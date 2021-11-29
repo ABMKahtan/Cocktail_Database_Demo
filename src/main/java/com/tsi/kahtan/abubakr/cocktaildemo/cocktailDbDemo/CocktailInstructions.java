@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CocktailInstructions {
-
+/*
     private List<CocktailInstructions> cocktailInstructionsList = new ArrayList<>();
     private int cocktailID;
     private int instructionID;
@@ -28,4 +28,5 @@ public class CocktailInstructions {
         String json = new Gson().toJson(cocktailInstructionsList);
         return json;
     }
+    */
 }

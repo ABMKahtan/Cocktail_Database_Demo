@@ -9,4 +9,10 @@ public class Garnish {
         this.garnishID = garnishID;
         this.garnishName = garnishName;
     }
+    @Override
+    public String toString(){
+        return "{" +
+                "\"name\"= \"" + garnishName +
+                "\"}";
+    }
 }

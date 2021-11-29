@@ -10,4 +10,10 @@ public class Equipment {
         this.equipmentName = equipmentName;
     }
 
+    @Override
+    public String toString(){
+        return "{" +
+                "\"name\"= \"" + equipmentName +
+                "\"}";
+    }
 }

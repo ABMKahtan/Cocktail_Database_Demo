@@ -9,4 +9,10 @@ public class Ingredient {
         this.ingredientName = ingredientName;
     }
 
+    @Override
+    public String toString(){
+        return "{" +
+                "\"name\"= \"" + ingredientName +
+                "\"}";
+    }
 }

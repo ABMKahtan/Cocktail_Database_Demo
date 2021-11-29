@@ -10,4 +10,10 @@ public class Glass {
         this.glassName = glassName;
     }
 
+    @Override
+    public String toString(){
+        return "{" +
+                "\"name\"= \"" + glassName +
+                "\"}";
+    }
 }
