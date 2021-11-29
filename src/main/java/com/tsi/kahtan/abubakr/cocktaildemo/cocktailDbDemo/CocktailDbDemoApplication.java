@@ -13,8 +13,6 @@ public class CocktailDbDemoApplication {
     @Autowired
     private CocktailRepository cocktailRepository;
 
-    //@CrossOrigin("http://localhost:8080")
-
     public static void main(String[] args) {
         SpringApplication.run(CocktailDbDemoApplication.class, args);
 
@@ -32,5 +30,6 @@ public class CocktailDbDemoApplication {
         cocktailRepository.save(addCocktail);
         return "Saved";
     }
+
 
 }
