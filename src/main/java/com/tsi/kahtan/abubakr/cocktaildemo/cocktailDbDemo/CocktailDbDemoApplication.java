@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/CocktailsDB")
 public class CocktailDbDemoApplication {
 
-    //	@Autowired
-//	private IngredientRepository ingredientRepository;
     @Autowired
     private CocktailRepository cocktailRepository;
 

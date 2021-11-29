@@ -48,11 +48,13 @@ public class Cocktail {
     public void setCocktail_description(String cocktail_description) {
         this.cocktail_description = cocktail_description;
     }
-/* @Override
+
+    @Override
     public String toString() {
         return "{" +
-                "\"name\"= \"" + cocktailName +
-                "\", \"Description\"=\"" + cocktailDescription +
+                "\"name\"= \"" + cocktail_name +
+                "\", \"Description\"=\"" + cocktail_description+
                 "\"}";
-    }*/
+    }
+
 }

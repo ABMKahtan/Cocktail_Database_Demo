@@ -16,4 +16,20 @@ public class Glass {
                 "\"name\"= \"" + glassName +
                 "\"}";
     }
+
+    public int getGlassID() {
+        return glassID;
+    }
+
+    public void setGlassID(int glassID) {
+        this.glassID = glassID;
+    }
+
+    public String getGlassName() {
+        return glassName;
+    }
+
+    public void setGlassName(String glassName) {
+        this.glassName = glassName;
+    }
 }

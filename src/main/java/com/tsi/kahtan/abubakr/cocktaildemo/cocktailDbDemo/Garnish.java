@@ -15,4 +15,20 @@ public class Garnish {
                 "\"name\"= \"" + garnishName +
                 "\"}";
     }
+
+    public int getGarnishID() {
+        return garnishID;
+    }
+
+    public void setGarnishID(int garnishID) {
+        this.garnishID = garnishID;
+    }
+
+    public String getGarnishName() {
+        return garnishName;
+    }
+
+    public void setGarnishName(String garnishName) {
+        this.garnishName = garnishName;
+    }
 }
