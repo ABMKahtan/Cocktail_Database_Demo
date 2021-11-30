@@ -1,35 +1,37 @@
 package com.tsi.kahtan.abubakr.cocktaildemo.cocktailDbDemo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Glass {
+    @Id
+    @GeneratedValue(strategy= GenerationType.TABLE)
+    private int glass_id;
 
-    private int glassID;
-    private String glassName;
+    private String glass_type;
 
-    public Glass(int glassID, String glassName){
-        this.glassID = glassID;
-        this.glassName = glassName;
+    public Glass(String glass_type){
+        this.glass_type = glass_type;
     }
 
     @Override
     public String toString(){
         return "{" +
-                "\"name\"= \"" + glassName +
+                "\"Type Of Glass\"= \"" + glass_type +
                 "\"}";
     }
+    public Glass(){
 
-    public int getGlassID() {
-        return glassID;
     }
 
-    public void setGlassID(int glassID) {
-        this.glassID = glassID;
+    public String getGlass_type() {
+        return glass_type;
     }
 
-    public String getGlassName() {
-        return glassName;
-    }
-
-    public void setGlassName(String glassName) {
-        this.glassName = glassName;
+    public void setGlass_type(String glass_type) {
+        this.glass_type = glass_type;
     }
 }

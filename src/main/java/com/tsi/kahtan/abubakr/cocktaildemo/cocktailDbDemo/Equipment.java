@@ -23,7 +23,7 @@ public class Equipment {
     @Override
     public String toString(){
         return "{" +
-                "\"name\"= \"" + equipment_name +
+                "\"equipment_name\"= \"" + equipment_name +
                 "\"}";
     }
 

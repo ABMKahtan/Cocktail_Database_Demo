@@ -1,34 +1,38 @@
 package com.tsi.kahtan.abubakr.cocktaildemo.cocktailDbDemo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Garnish {
+    @Id
+    @GeneratedValue(strategy= GenerationType.TABLE)
+    private int garnish_id;
 
-    private int garnishID;
-    private String garnishName;
+    private String garnish_name;
 
-    public Garnish(int garnishID, String garnishName){
-        this.garnishID = garnishID;
-        this.garnishName = garnishName;
+    public Garnish(String garnish_name){
+        this.garnish_name = garnish_name;
     }
+
+    public Garnish(){
+
+    }
+
     @Override
     public String toString(){
         return "{" +
-                "\"name\"= \"" + garnishName +
+                "\"garnish_name\"= \"" + garnish_name +
                 "\"}";
     }
 
-    public int getGarnishID() {
-        return garnishID;
+    public String getGarnish_name() {
+        return garnish_name;
     }
 
-    public void setGarnishID(int garnishID) {
-        this.garnishID = garnishID;
-    }
-
-    public String getGarnishName() {
-        return garnishName;
-    }
-
-    public void setGarnishName(String garnishName) {
-        this.garnishName = garnishName;
+    public void setGarnish_name(String garnish_name) {
+        this.garnish_name = garnish_name;
     }
 }

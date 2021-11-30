@@ -1,34 +1,37 @@
 package com.tsi.kahtan.abubakr.cocktaildemo.cocktailDbDemo;
 
-public class Ingredient {
-    private int ingredientID;
-    private String ingredientName;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-    public Ingredient(int ingredientID, String ingredientName){
-        this.ingredientID = ingredientID;
-        this.ingredientName = ingredientName;
+@Entity
+public class Ingredient {
+    @Id
+    @GeneratedValue(strategy= GenerationType.TABLE)
+    private int ingredient_id;
+
+    private String ingredient_name;
+
+    public Ingredient(String ingredient_name){
+        this.ingredient_name = ingredient_name;
+    }
+    public Ingredient(){
+
     }
 
     @Override
     public String toString(){
         return "{" +
-                "\"name\"= \"" + ingredientName +
+                "\"Ingredient\"= \"" + ingredient_name +
                 "\"}";
     }
 
-    public int getIngredientID() {
-        return ingredientID;
+    public String getIngredient_name() {
+        return ingredient_name;
     }
 
-    public void setIngredientID(int ingredientID) {
-        this.ingredientID = ingredientID;
-    }
-
-    public String getIngredientName() {
-        return ingredientName;
-    }
-
-    public void setIngredientName(String ingredientName) {
-        this.ingredientName = ingredientName;
+    public void setIngredient_name(String ingredient_name) {
+        this.ingredient_name = ingredient_name;
     }
 }
