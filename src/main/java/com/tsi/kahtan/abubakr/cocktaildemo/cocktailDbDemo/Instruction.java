@@ -1,23 +1,34 @@
 package com.tsi.kahtan.abubakr.cocktaildemo.cocktailDbDemo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Instruction {
+    @Id
+    @GeneratedValue(strategy= GenerationType.TABLE)
+    private int instruction_id;
+    private String instruction_description;
+    private int garnish_id;
+    private int glass_id;
 
-    private int instructionID;
-    private String instructionDescription;
-    private int garnishID;
-    private int glassID;
+    public Instruction(int instruction_id, String instruction_description, int garnish_id, int glass_id){
 
-    public Instruction(int instructionID, String instructionDescription, int garnishID, int glassID){
-        this.instructionID = instructionID;
-        this.instructionDescription = instructionDescription;
-        this.garnishID = garnishID;
-        this.glassID = glassID;
+        this.instruction_id = instruction_id;
+        this.instruction_description = instruction_description;
+        this.garnish_id = garnish_id;
+        this.glass_id = glass_id;
+    }
+    public Instruction(){
+
     }
 
     @Override
     public String toString(){
         return "{" +
-                "\"Instruction Information: \"= \"" + instructionDescription +
+                "\"Instruction Information: \"= \"" + instruction_description +
                 "\"}";
     }
 
