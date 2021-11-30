@@ -12,6 +12,8 @@ public class CocktailDbDemoApplication {
 
     @Autowired
     private CocktailRepository cocktailRepository;
+    @Autowired
+    private EquipmentRepository equipmentRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(CocktailDbDemoApplication.class, args);
@@ -28,6 +30,18 @@ public class CocktailDbDemoApplication {
 
         Cocktail addCocktail = new Cocktail(cocktail_name,cocktailDescription);
         cocktailRepository.save(addCocktail);
+        return "Saved";
+    }
+    @GetMapping("/allEquipment")
+    public @ResponseBody
+    Iterable<Equipment> getAllEquipment() {
+        return equipmentRepository.findAll();
+    }
+
+    @PostMapping("/addEquipment")
+    public @ResponseBody String addEquipment(@RequestParam String equipment_name){
+        Equipment addEquipment = new Equipment(equipment_name);
+        equipmentRepository.save(addEquipment);
         return "Saved";
     }
 
