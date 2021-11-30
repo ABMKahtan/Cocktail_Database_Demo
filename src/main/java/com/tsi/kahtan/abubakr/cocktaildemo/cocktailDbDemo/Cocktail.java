@@ -9,14 +9,12 @@ import javax.persistence.Id;
 public class Cocktail {
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
-    private int id;
-
     private int cocktail_id;
+
     private String cocktail_name;
     private String cocktail_description;
 
-    public Cocktail(int cocktailID, String cocktailName, String cocktailDescription){
-        this.cocktail_id = cocktailID;
+    public Cocktail(String cocktailName, String cocktailDescription){
         this.cocktail_name = cocktailName;
         this.cocktail_description = cocktailDescription;
     }
@@ -56,5 +54,4 @@ public class Cocktail {
                 "\", \"Description\"=\"" + cocktail_description+
                 "\"}";
     }
-
 }

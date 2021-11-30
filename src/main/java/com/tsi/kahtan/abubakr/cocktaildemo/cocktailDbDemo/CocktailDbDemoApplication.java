@@ -24,12 +24,11 @@ public class CocktailDbDemoApplication {
     }
 
     @PostMapping("/addCocktail")
-    public @ResponseBody String addCocktail(@RequestParam int cocktail_id, String cocktail_name, String cocktailDescription ){
+    public @ResponseBody String addCocktail(@RequestParam String cocktail_name, String cocktailDescription ){
 
-        Cocktail addCocktail = new Cocktail(cocktail_id,cocktail_name,cocktailDescription);
+        Cocktail addCocktail = new Cocktail(cocktail_name,cocktailDescription);
         cocktailRepository.save(addCocktail);
         return "Saved";
     }
-
 
 }
