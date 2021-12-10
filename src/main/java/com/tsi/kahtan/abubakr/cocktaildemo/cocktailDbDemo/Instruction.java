@@ -14,9 +14,7 @@ public class Instruction {
     private int garnish_id;
     private int glass_id;
 
-    public Instruction(int instruction_id, String instruction_description, int garnish_id, int glass_id){
-
-        this.instruction_id = instruction_id;
+    public Instruction(String instruction_description, int garnish_id, int glass_id){
         this.instruction_description = instruction_description;
         this.garnish_id = garnish_id;
         this.glass_id = glass_id;
