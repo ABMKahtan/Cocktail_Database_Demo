@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/CocktailsDB")
 public class CocktailDbDemoApplication {
-    private static SecretGetter secretDB = new SecretGetter();
 
     @Autowired
     private CocktailRepository cocktailRepository;
@@ -23,7 +22,6 @@ public class CocktailDbDemoApplication {
     private IngredientRepository ingredientRepository;
 
     public static void main(String[] args) {
-        secretDB.getSecret();
         SpringApplication.run(CocktailDbDemoApplication.class, args);
 
     }
