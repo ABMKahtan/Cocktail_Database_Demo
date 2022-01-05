@@ -6,13 +6,15 @@ import org.junit.jupiter.api.Test;
 
 public class GarnishTest {
     Garnish testGarnish = new Garnish("name");
+    Garnish testGarnish2 = new Garnish();
 
     @Test
     public void testGarnish(){
         Assertions.assertEquals("name",testGarnish.getGarnish_name(),"name is not initialised");
-        testGarnish.setGarnish_name("testGarnish");
-        Assertions.assertEquals("testGarnish",testGarnish.getGarnish_name() ,"Garnish Name Does not match");
-        Assertions.assertEquals(0, testGarnish.getGarnish_id(),"It detects more than the element created");
-        Assertions.assertEquals("{\"garnish_name\"= \"testGarnish\"}",testGarnish.toString(),"toString Displays unexpectedly");
+
+        testGarnish2.setGarnish_name("testGarnish");
+        Assertions.assertEquals("testGarnish",testGarnish2.getGarnish_name() ,"Garnish Name Does not match");
+        Assertions.assertEquals(0, testGarnish2.getGarnish_id(),"It detects more than the element created");
+        Assertions.assertEquals("{\"garnish_name\"= \"testGarnish\"}",testGarnish2.toString(),"toString Displays unexpectedly");
     }
 }
