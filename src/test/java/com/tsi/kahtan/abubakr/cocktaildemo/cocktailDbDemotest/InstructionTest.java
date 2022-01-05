@@ -20,5 +20,6 @@ public class InstructionTest {
         Assertions.assertEquals(0, testInstruction2.getGlass_id(),"glass id is not whats expected");
         Assertions.assertEquals(0, testInstruction2.getGarnish_id(), "garnish id is not what is expected");
         Assertions.assertEquals(0, testInstruction2.getInstruction_id(), "instruction id is not whats expected");
+        Assertions.assertEquals("{\"Instruction Information: \"= \"instructionStep\"}", testInstruction2.toString(),"toString Is not what is expected");
     }
 }
