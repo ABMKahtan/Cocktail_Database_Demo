@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ingredient.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">cocktailDbDemo2</a> &gt; <a href="index.source.html" class="el_package">com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb</a> &gt; <span class="el_source">Ingredient.java</span></div><h1>Ingredient.java</h1><pre class="source lang-java linenums">package com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Ingredient {
+    @Id
+    @GeneratedValue(strategy= GenerationType.TABLE)
+    private int ingredient_id;
+
+    private String ingredient_name;
+
+<span class="nc" id="L16">    public Ingredient(String ingredient_name){</span>
+<span class="nc" id="L17">        this.ingredient_name = ingredient_name;</span>
+<span class="nc" id="L18">    }</span>
+<span class="fc" id="L19">    public Ingredient(){</span>
+
+<span class="fc" id="L21">    }</span>
+
+    @Override
+    public String toString(){
+<span class="fc" id="L25">        return &quot;{&quot; +</span>
+                &quot;\&quot;Ingredient\&quot;= \&quot;&quot; + ingredient_name +
+                &quot;\&quot;}&quot;;
+    }
+
+    public String getIngredient_name() {
+<span class="fc" id="L31">        return ingredient_name;</span>
+    }
+
+    public int getIngredient_id() {
+<span class="fc" id="L35">        return ingredient_id;</span>
+    }
+
+    public void setIngredient_name(String ingredient_name) {
+<span class="fc" id="L39">        this.ingredient_name = ingredient_name;</span>
+<span class="fc" id="L40">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

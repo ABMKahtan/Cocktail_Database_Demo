@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Cocktail.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">cocktailDbDemo2</a> &gt; <a href="index.source.html" class="el_package">com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb</a> &gt; <span class="el_source">Cocktail.java</span></div><h1>Cocktail.java</h1><pre class="source lang-java linenums">package com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Cocktail {
+
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.TABLE)
+    private int cocktail_id;
+
+    private String cocktail_name;
+    private String cocktail_description;
+
+<span class="nc" id="L19">    public Cocktail(String cocktailName, String cocktailDescription){</span>
+<span class="nc" id="L20">        this.cocktail_name = cocktailName;</span>
+<span class="nc" id="L21">        this.cocktail_description = cocktailDescription;</span>
+<span class="nc" id="L22">    }</span>
+
+<span class="fc" id="L24">    public Cocktail(){</span>
+
+<span class="fc" id="L26">    }</span>
+
+    public String getCocktail_name() {
+<span class="fc" id="L29">        return cocktail_name;</span>
+    }
+
+    public void setCocktail_name(String cocktail_name) {
+<span class="fc" id="L33">        this.cocktail_name = cocktail_name;</span>
+<span class="fc" id="L34">    }</span>
+
+    public String getCocktail_description() {
+<span class="fc" id="L37">        return cocktail_description;</span>
+    }
+
+    public void setCocktail_description(String cocktail_description) {
+<span class="fc" id="L41">        this.cocktail_description = cocktail_description;</span>
+<span class="fc" id="L42">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L46">        return &quot;{&quot; +</span>
+                &quot;\&quot;name\&quot;= \&quot;&quot; + cocktail_name +
+                &quot;\&quot;, \&quot;Description\&quot;=\&quot;&quot; + cocktail_description+
+                &quot;\&quot;}&quot;;
+    }
+
+    public int getCocktail_id() {
+<span class="fc" id="L53">        return cocktail_id;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

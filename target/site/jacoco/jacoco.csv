@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,CocktailDbDemoApplication,89,0,0,0,23,0,12,0,12,0
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,Equipment,6,17,0,0,3,7,1,5,1,5
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,EquipmentInstructions,3,0,0,0,1,0,1,0,1,0
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,Garnish,6,17,0,0,3,7,1,5,1,5
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,IngredientInstructions,3,0,0,0,1,0,1,0,1,0
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,Glass,6,17,0,0,3,7,1,5,1,5
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,CocktailInstructions,3,0,0,0,1,0,1,0,1,0
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,Instruction,16,27,0,0,6,12,2,8,2,8
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,Cocktail,9,26,0,0,4,10,1,7,1,7
+cocktailDbDemo2,com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb,Ingredient,6,17,0,0,3,7,1,5,1,5

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Glass.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">cocktailDbDemo2</a> &gt; <a href="index.source.html" class="el_package">com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb</a> &gt; <span class="el_source">Glass.java</span></div><h1>Glass.java</h1><pre class="source lang-java linenums">package com.tsi.kahtan.abubakr.cocktaildemo.cocktailDb;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Glass {
+
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.TABLE)
+    private int glass_id;
+
+    private String glass_type;
+
+<span class="nc" id="L18">    public Glass(String glass_type){</span>
+<span class="nc" id="L19">        this.glass_type = glass_type;</span>
+<span class="nc" id="L20">    }</span>
+
+    @Override
+    public String toString(){
+<span class="fc" id="L24">        return &quot;{&quot; +</span>
+                &quot;\&quot;Type Of Glass\&quot;= \&quot;&quot; + glass_type +
+                &quot;\&quot;}&quot;;
+    }
+<span class="fc" id="L28">    public Glass(){</span>
+
+<span class="fc" id="L30">    }</span>
+
+    public String getGlass_type() {
+<span class="fc" id="L33">        return glass_type;</span>
+    }
+
+    public int getGlass_id() {
+<span class="fc" id="L37">        return glass_id;</span>
+    }
+
+    public void setGlass_type(String glass_type) {
+<span class="fc" id="L41">        this.glass_type = glass_type;</span>
+<span class="fc" id="L42">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
