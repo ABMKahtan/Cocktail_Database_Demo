@@ -31,6 +31,10 @@ public class Ingredient {
         return ingredient_name;
     }
 
+    public int getIngredient_id() {
+        return ingredient_id;
+    }
+
     public void setIngredient_name(String ingredient_name) {
         this.ingredient_name = ingredient_name;
     }

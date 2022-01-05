@@ -2,6 +2,8 @@ com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\CocktailTest.class
 com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\GarnishTest.class
 com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\CocktailDbDemoApplicationTests.class
 com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\GlassTest.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\IngredientTest.class
 com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\runCucumberTest.class
 com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\EquipmentTest.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\InstructionTest.class
 com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\menuCucumberStepsDef.class
