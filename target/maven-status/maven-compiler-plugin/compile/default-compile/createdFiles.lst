@@ -1,0 +1,16 @@
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\GarnishRepository.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\IngredientRepository.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\CocktailRepository.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\Cocktail.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\Garnish.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\InstructionRepository.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\Ingredient.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\CocktailInstructions.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\EquipmentRepository.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\Instruction.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\CocktailDbDemoApplication.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\Equipment.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\EquipmentInstructions.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\IngredientInstructions.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\Glass.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDb\GlassRepository.class
