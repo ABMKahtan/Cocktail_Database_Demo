@@ -5,9 +5,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class InstructionTest {
-    Instruction testInstruction = new Instruction();
+    Instruction testInstruction = new Instruction("name",1,1);
     @Test
     public void testInstruction(){
+        Assertions.assertEquals("name",testInstruction.getInstruction_description(),"Instruction description is not initialised");
+        Assertions.assertEquals(1, testInstruction.getGlass_id(),"glass id is not initialised");
+        Assertions.assertEquals(1, testInstruction.getGarnish_id(), "garnish id is not initialised");
         testInstruction.setGlass_id(0);
         testInstruction.setGarnish_id(0);
         testInstruction.setInstruction_description("instructionStep");

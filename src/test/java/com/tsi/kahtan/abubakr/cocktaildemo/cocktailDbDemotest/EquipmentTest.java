@@ -5,10 +5,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class EquipmentTest {
-    Equipment testEquipment = new Equipment();
+    Equipment testEquipment = new Equipment("name");
 
     @Test
     public void testEquipment(){
+        Assertions.assertEquals("name", testEquipment.getEquipment_name(),"name not initialised");
         testEquipment.setEquipment_name("testName");
         Assertions.assertEquals("testName",testEquipment.getEquipment_name(),"Set Name Doesn't Work");
         Assertions.assertEquals("{\"equipment_name\"= \"testName\"}",testEquipment.toString() ,"to String Method Displays Wrong");
