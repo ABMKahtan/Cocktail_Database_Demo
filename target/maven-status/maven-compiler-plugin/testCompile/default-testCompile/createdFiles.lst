@@ -7,3 +7,4 @@ com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\runCucumberTest.class
 com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\EquipmentTest.class
 com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\InstructionTest.class
 com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\menuCucumberStepsDef.class
+com\tsi\kahtan\abubakr\cocktaildemo\cocktailDbDemotest\MockitoTest.class
