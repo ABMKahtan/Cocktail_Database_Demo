@@ -68,10 +68,41 @@ public class MockitoTest {
         verify(equipmentRepository).findAll();
     }
     @Test
+    public void testAddEquipment(){
+        Equipment savedEquipment = new Equipment("testEquipment");
+
+        String expected = "Saved";
+
+        String Actual = cocktailDbDemoApplication.addEquipment(savedEquipment.getEquipment_name());
+
+        ArgumentCaptor<Equipment> cocktailArgumentCaptor = ArgumentCaptor.forClass(Equipment.class);
+
+        verify(equipmentRepository).save(cocktailArgumentCaptor.capture());
+
+        cocktailArgumentCaptor.getValue();
+
+        Assertions.assertEquals(expected,Actual,"Not saved into the database");
+    }
+    @Test
     public void getAllGarnish(){
 
         cocktailDbDemoApplication.getAllGarnish();
         verify(garnishRepository).findAll();
     }
+    @Test
+    public void testAddGarnish(){
+        Garnish savedGarnish = new Garnish("testGarnish");
 
+        String expected = "Saved";
+
+        String Actual = cocktailDbDemoApplication.addGarnish(savedGarnish.getGarnish_name());
+
+        ArgumentCaptor<Garnish> cocktailArgumentCaptor = ArgumentCaptor.forClass(Garnish.class);
+
+        verify(garnishRepository).save(cocktailArgumentCaptor.capture());
+
+        cocktailArgumentCaptor.getValue();
+
+        Assertions.assertEquals(expected,Actual,"Not saved into the database");
+    }
 }

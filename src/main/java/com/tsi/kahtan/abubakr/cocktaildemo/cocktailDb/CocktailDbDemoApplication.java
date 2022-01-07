@@ -22,6 +22,7 @@ public class CocktailDbDemoApplication {
     private IngredientRepository ingredientRepository;
     @Autowired
     private InstructionRepository instructionRepository;
+    private String saved = "Saved";
 
 
     public CocktailDbDemoApplication(CocktailRepository cocktailRepository, EquipmentRepository equipmentRepository, GarnishRepository garnishRepository, GlassRepository glassRepository, IngredientRepository ingredientRepository, InstructionRepository instructionRepository) {
@@ -48,7 +49,7 @@ public class CocktailDbDemoApplication {
 
         Cocktail addCocktail = new Cocktail(cocktail_name,cocktailDescription);
         cocktailRepository.save(addCocktail);
-        return "Saved";
+        return saved;
     }
     @GetMapping("/allEquipment")
     public @ResponseBody
@@ -60,7 +61,7 @@ public class CocktailDbDemoApplication {
     public @ResponseBody String addEquipment(@RequestParam String equipment_name){
         Equipment addEquipment = new Equipment(equipment_name);
         equipmentRepository.save(addEquipment);
-        return "Saved";
+        return saved;
     }
     @GetMapping("/allGarnish")
     public @ResponseBody
@@ -72,7 +73,7 @@ public class CocktailDbDemoApplication {
     public @ResponseBody String addGarnish(@RequestParam String garnish_name){
         Garnish addGarnish = new Garnish(garnish_name);
         garnishRepository.save(addGarnish);
-        return "Saved";
+        return saved;
     }
     @GetMapping("/allGlass")
     public @ResponseBody
@@ -84,7 +85,7 @@ public class CocktailDbDemoApplication {
     public @ResponseBody String addGlass(@RequestParam String glass_type){
         Glass addGlass = new Glass(glass_type);
         glassRepository.save(addGlass);
-        return "Saved";
+        return saved;
     }
     @GetMapping("/allIngredients")
     public @ResponseBody
@@ -96,7 +97,7 @@ public class CocktailDbDemoApplication {
     public @ResponseBody String addIngredient(@RequestParam String ingredient_name){
         Ingredient addIngredient = new Ingredient(ingredient_name);
         ingredientRepository.save(addIngredient);
-        return "Saved";
+        return saved;
     }
 
     //MAKE INSTRUCTION REPO MAPPINGS
