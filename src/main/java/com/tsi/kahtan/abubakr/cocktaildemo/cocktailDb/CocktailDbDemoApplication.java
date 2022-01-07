@@ -20,6 +20,18 @@ public class CocktailDbDemoApplication {
     private GlassRepository glassRepository;
     @Autowired
     private IngredientRepository ingredientRepository;
+    @Autowired
+    private InstructionRepository instructionRepository;
+
+
+    public CocktailDbDemoApplication(CocktailRepository cocktailRepository, EquipmentRepository equipmentRepository, GarnishRepository garnishRepository, GlassRepository glassRepository, IngredientRepository ingredientRepository, InstructionRepository instructionRepository) {
+        this.cocktailRepository = cocktailRepository;
+        this.equipmentRepository = equipmentRepository;
+        this.garnishRepository = garnishRepository;
+        this.glassRepository = glassRepository;
+        this.ingredientRepository = ingredientRepository;
+        this.instructionRepository = instructionRepository;
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(CocktailDbDemoApplication.class, args);
@@ -62,7 +74,6 @@ public class CocktailDbDemoApplication {
         garnishRepository.save(addGarnish);
         return "Saved";
     }
-
     @GetMapping("/allGlass")
     public @ResponseBody
     Iterable<Glass> getAllGlass() {
@@ -88,4 +99,5 @@ public class CocktailDbDemoApplication {
         return "Saved";
     }
 
+    //MAKE INSTRUCTION REPO MAPPINGS
 }
