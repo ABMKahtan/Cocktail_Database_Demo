@@ -78,26 +78,26 @@ public class CocktailDbDemoApplication {
     @GetMapping(&quot;/allGlass&quot;)
     public @ResponseBody
     Iterable&lt;Glass&gt; getAllGlass() {
-<span class="nc" id="L81">        return glassRepository.findAll();</span>
+<span class="fc" id="L81">        return glassRepository.findAll();</span>
     }
 
     @PostMapping(&quot;/addGlass&quot;)
     public @ResponseBody String addGlass(@RequestParam String glass_type){
-<span class="nc" id="L86">        Glass addGlass = new Glass(glass_type);</span>
-<span class="nc" id="L87">        glassRepository.save(addGlass);</span>
-<span class="nc" id="L88">        return saved;</span>
+<span class="fc" id="L86">        Glass addGlass = new Glass(glass_type);</span>
+<span class="fc" id="L87">        glassRepository.save(addGlass);</span>
+<span class="fc" id="L88">        return saved;</span>
     }
     @GetMapping(&quot;/allIngredients&quot;)
     public @ResponseBody
     Iterable&lt;Ingredient&gt; getAllIngredients() {
-<span class="nc" id="L93">        return ingredientRepository.findAll();</span>
+<span class="fc" id="L93">        return ingredientRepository.findAll();</span>
     }
 
     @PostMapping(&quot;/addIngredient&quot;)
     public @ResponseBody String addIngredient(@RequestParam String ingredient_name){
-<span class="nc" id="L98">        Ingredient addIngredient = new Ingredient(ingredient_name);</span>
-<span class="nc" id="L99">        ingredientRepository.save(addIngredient);</span>
-<span class="nc" id="L100">        return saved;</span>
+<span class="fc" id="L98">        Ingredient addIngredient = new Ingredient(ingredient_name);</span>
+<span class="fc" id="L99">        ingredientRepository.save(addIngredient);</span>
+<span class="fc" id="L100">        return saved;</span>
     }
 
     //MAKE INSTRUCTION REPO MAPPINGS

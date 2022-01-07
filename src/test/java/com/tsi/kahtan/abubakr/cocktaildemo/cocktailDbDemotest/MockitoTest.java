@@ -57,7 +57,7 @@ public class MockitoTest {
 
         cocktailArgumentCaptor.getValue();
 
-        Assertions.assertEquals(expected,Actual,"Not saved into the database");
+        Assertions.assertEquals(expected,Actual,"Cocktail is not saved into the database");
 
     }
 
@@ -81,7 +81,7 @@ public class MockitoTest {
 
         cocktailArgumentCaptor.getValue();
 
-        Assertions.assertEquals(expected,Actual,"Not saved into the database");
+        Assertions.assertEquals(expected,Actual,"Equipment is not saved into the database");
     }
     @Test
     public void getAllGarnish(){
@@ -103,6 +103,50 @@ public class MockitoTest {
 
         cocktailArgumentCaptor.getValue();
 
-        Assertions.assertEquals(expected,Actual,"Not saved into the database");
+        Assertions.assertEquals(expected,Actual,"Garnish is not saved into the database");
+    }
+    @Test
+    public void getAllGlass(){
+
+        cocktailDbDemoApplication.getAllGlass();
+        verify(glassRepository).findAll();
+    }
+    @Test
+    public void testAddGlass(){
+        Glass savedGlass = new Glass("testGlass");
+
+        String expected = "Saved";
+
+        String Actual = cocktailDbDemoApplication.addGlass(savedGlass.getGlass_type());
+
+        ArgumentCaptor<Glass> cocktailArgumentCaptor = ArgumentCaptor.forClass(Glass.class);
+
+        verify(glassRepository).save(cocktailArgumentCaptor.capture());
+
+        cocktailArgumentCaptor.getValue();
+
+        Assertions.assertEquals(expected,Actual,"Glass is not saved into the database");
+    }
+    @Test
+    public void getAllIngredients(){
+
+        cocktailDbDemoApplication.getAllIngredients();
+        verify(ingredientRepository).findAll();
+    }
+    @Test
+    public void testAddIngredient(){
+        Ingredient savedIngredient = new Ingredient("testIngredient");
+
+        String expected = "Saved";
+
+        String Actual = cocktailDbDemoApplication.addIngredient(savedIngredient.getIngredient_name());
+
+        ArgumentCaptor<Ingredient> cocktailArgumentCaptor = ArgumentCaptor.forClass(Ingredient.class);
+
+        verify(ingredientRepository).save(cocktailArgumentCaptor.capture());
+
+        cocktailArgumentCaptor.getValue();
+
+        Assertions.assertEquals(expected,Actual,"Ingredient is not saved into the database");
     }
 }

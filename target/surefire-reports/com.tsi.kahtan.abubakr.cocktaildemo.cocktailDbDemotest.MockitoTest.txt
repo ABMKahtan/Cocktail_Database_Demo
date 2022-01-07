@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tsi.kahtan.abubakr.cocktaildemo.cocktailDbDemotest.MockitoTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.644 s - in com.tsi.kahtan.abubakr.cocktaildemo.cocktailDbDemotest.MockitoTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.08 s - in com.tsi.kahtan.abubakr.cocktaildemo.cocktailDbDemotest.MockitoTest
