@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @SpringBootApplication
 @RestController
 @RequestMapping(&quot;/CocktailsDB&quot;)
+@CrossOrigin
 public class CocktailDbDemoApplication {
 
     @Autowired
@@ -22,82 +23,82 @@ public class CocktailDbDemoApplication {
     private IngredientRepository ingredientRepository;
     @Autowired
     private InstructionRepository instructionRepository;
-<span class="fc" id="L25">    private String saved = &quot;Saved&quot;;</span>
+<span class="fc" id="L26">    private String saved = &quot;Saved&quot;;</span>
 
 
-<span class="fc" id="L28">    public CocktailDbDemoApplication(CocktailRepository cocktailRepository, EquipmentRepository equipmentRepository, GarnishRepository garnishRepository, GlassRepository glassRepository, IngredientRepository ingredientRepository, InstructionRepository instructionRepository) {</span>
-<span class="fc" id="L29">        this.cocktailRepository = cocktailRepository;</span>
-<span class="fc" id="L30">        this.equipmentRepository = equipmentRepository;</span>
-<span class="fc" id="L31">        this.garnishRepository = garnishRepository;</span>
-<span class="fc" id="L32">        this.glassRepository = glassRepository;</span>
-<span class="fc" id="L33">        this.ingredientRepository = ingredientRepository;</span>
-<span class="fc" id="L34">        this.instructionRepository = instructionRepository;</span>
-<span class="fc" id="L35">    }</span>
+<span class="fc" id="L29">    public CocktailDbDemoApplication(CocktailRepository cocktailRepository, EquipmentRepository equipmentRepository, GarnishRepository garnishRepository, GlassRepository glassRepository, IngredientRepository ingredientRepository, InstructionRepository instructionRepository) {</span>
+<span class="fc" id="L30">        this.cocktailRepository = cocktailRepository;</span>
+<span class="fc" id="L31">        this.equipmentRepository = equipmentRepository;</span>
+<span class="fc" id="L32">        this.garnishRepository = garnishRepository;</span>
+<span class="fc" id="L33">        this.glassRepository = glassRepository;</span>
+<span class="fc" id="L34">        this.ingredientRepository = ingredientRepository;</span>
+<span class="fc" id="L35">        this.instructionRepository = instructionRepository;</span>
+<span class="fc" id="L36">    }</span>
 
     public static void main(String[] args) {
-<span class="nc" id="L38">        SpringApplication.run(CocktailDbDemoApplication.class, args);</span>
+<span class="nc" id="L39">        SpringApplication.run(CocktailDbDemoApplication.class, args);</span>
 
-<span class="nc" id="L40">    }</span>
+<span class="nc" id="L41">    }</span>
     @GetMapping(&quot;/allCocktails&quot;)
     public @ResponseBody
     Iterable&lt;Cocktail&gt; getAllCocktails() {
-<span class="fc" id="L44">        return cocktailRepository.findAll();</span>
+<span class="fc" id="L45">        return cocktailRepository.findAll();</span>
     }
 
     @PostMapping(&quot;/addCocktail&quot;)
-    public @ResponseBody String addCocktail(@RequestParam String cocktail_name, String cocktailDescription ){
+    public @ResponseBody String addCocktail(@RequestParam String cocktail_name, String cocktail_description ){
 
-<span class="fc" id="L50">        Cocktail addCocktail = new Cocktail(cocktail_name,cocktailDescription);</span>
-<span class="fc" id="L51">        cocktailRepository.save(addCocktail);</span>
-<span class="fc" id="L52">        return saved;</span>
+<span class="fc" id="L51">        Cocktail addCocktail = new Cocktail(cocktail_name,cocktail_description);</span>
+<span class="fc" id="L52">        cocktailRepository.save(addCocktail);</span>
+<span class="fc" id="L53">        return saved;</span>
     }
     @GetMapping(&quot;/allEquipment&quot;)
     public @ResponseBody
     Iterable&lt;Equipment&gt; getAllEquipment() {
-<span class="fc" id="L57">        return equipmentRepository.findAll();</span>
+<span class="fc" id="L58">        return equipmentRepository.findAll();</span>
     }
 
     @PostMapping(&quot;/addEquipment&quot;)
     public @ResponseBody String addEquipment(@RequestParam String equipment_name){
-<span class="fc" id="L62">        Equipment addEquipment = new Equipment(equipment_name);</span>
-<span class="fc" id="L63">        equipmentRepository.save(addEquipment);</span>
-<span class="fc" id="L64">        return saved;</span>
+<span class="fc" id="L63">        Equipment addEquipment = new Equipment(equipment_name);</span>
+<span class="fc" id="L64">        equipmentRepository.save(addEquipment);</span>
+<span class="fc" id="L65">        return saved;</span>
     }
     @GetMapping(&quot;/allGarnish&quot;)
     public @ResponseBody
     Iterable&lt;Garnish&gt; getAllGarnish() {
-<span class="fc" id="L69">        return garnishRepository.findAll();</span>
+<span class="fc" id="L70">        return garnishRepository.findAll();</span>
     }
 
     @PostMapping(&quot;/addGarnish&quot;)
     public @ResponseBody String addGarnish(@RequestParam String garnish_name){
-<span class="fc" id="L74">        Garnish addGarnish = new Garnish(garnish_name);</span>
-<span class="fc" id="L75">        garnishRepository.save(addGarnish);</span>
-<span class="fc" id="L76">        return saved;</span>
+<span class="fc" id="L75">        Garnish addGarnish = new Garnish(garnish_name);</span>
+<span class="fc" id="L76">        garnishRepository.save(addGarnish);</span>
+<span class="fc" id="L77">        return saved;</span>
     }
     @GetMapping(&quot;/allGlass&quot;)
     public @ResponseBody
     Iterable&lt;Glass&gt; getAllGlass() {
-<span class="fc" id="L81">        return glassRepository.findAll();</span>
+<span class="fc" id="L82">        return glassRepository.findAll();</span>
     }
 
     @PostMapping(&quot;/addGlass&quot;)
     public @ResponseBody String addGlass(@RequestParam String glass_type){
-<span class="fc" id="L86">        Glass addGlass = new Glass(glass_type);</span>
-<span class="fc" id="L87">        glassRepository.save(addGlass);</span>
-<span class="fc" id="L88">        return saved;</span>
+<span class="fc" id="L87">        Glass addGlass = new Glass(glass_type);</span>
+<span class="fc" id="L88">        glassRepository.save(addGlass);</span>
+<span class="fc" id="L89">        return saved;</span>
     }
     @GetMapping(&quot;/allIngredients&quot;)
     public @ResponseBody
     Iterable&lt;Ingredient&gt; getAllIngredients() {
-<span class="fc" id="L93">        return ingredientRepository.findAll();</span>
+<span class="fc" id="L94">        return ingredientRepository.findAll();</span>
     }
 
     @PostMapping(&quot;/addIngredient&quot;)
     public @ResponseBody String addIngredient(@RequestParam String ingredient_name){
-<span class="fc" id="L98">        Ingredient addIngredient = new Ingredient(ingredient_name);</span>
-<span class="fc" id="L99">        ingredientRepository.save(addIngredient);</span>
-<span class="fc" id="L100">        return saved;</span>
+<span class="fc" id="L99">        Ingredient addIngredient = new Ingredient(ingredient_name);</span>
+<span class="fc" id="L100">        ingredientRepository.save(addIngredient);</span>
+<span class="fc" id="L101">        return saved;</span>
     }
 
     //MAKE INSTRUCTION REPO MAPPINGS

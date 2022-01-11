@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @SpringBootApplication
 @RestController
 @RequestMapping("/CocktailsDB")
+@CrossOrigin
 public class CocktailDbDemoApplication {
 
     @Autowired
@@ -45,9 +46,9 @@ public class CocktailDbDemoApplication {
     }
 
     @PostMapping("/addCocktail")
-    public @ResponseBody String addCocktail(@RequestParam String cocktail_name, String cocktailDescription ){
+    public @ResponseBody String addCocktail(@RequestParam String cocktail_name, String cocktail_description ){
 
-        Cocktail addCocktail = new Cocktail(cocktail_name,cocktailDescription);
+        Cocktail addCocktail = new Cocktail(cocktail_name,cocktail_description);
         cocktailRepository.save(addCocktail);
         return saved;
     }
